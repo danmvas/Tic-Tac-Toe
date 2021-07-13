@@ -13,32 +13,40 @@
     </head>
 
     <!-- the user is going to see this -->
-    <body>
+    <body id="grad">
         <div id="container">
 
         <h1 id="title">TicTacToe: Let's Play!</h1>
-        <forms>
-            <div>
-                <input type="text">
-                <label>Usuário</label>
-            </div>
-            <div>
-                <input type="password">
-                <label>Senha</label>
-            </div>
-        </forms>
-        <span ><a id="forgotpassword" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Esqueceu a senha?</a></span>
 
+        <h2 id="subtitle">Registre-se</h2>
+        
+        <forms>
+            <p>
+                <input type="text">
+                <label><span style="color:black">Usuário</span></label>
+            </p><p>
+                <input type="text">
+                <label><span style="color:black">eMail</span></label>
+            </p><p>
+                <input type="password">
+                <label><span style="color:black">Senha</span></label>
+            </p>
+            <p>
+                <input type="password">
+                <label><span style="color:black">Insira a senha novamente</span></label>
+            </p>
+        </forms>
+        
         <button id="login-button">
-            <p id="login-text">Login</p>
+            <p id="login-text">Cadastrar</p>
         </button>
 
         <div id="grey-bar">
-            <h5 align="right">Ainda não possui uma conta?
-            <button id="cadastrar">Cadastre-se!</button>
+            <p align="right">Já possui uma conta?
+            <a href="login.html"><button id="cadastrar">Login</button></a>
             </h5>
         </div>
 
-        </div> 
+         
     </body>
 </html>

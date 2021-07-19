@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table tr td {
+  width: 33%;
+  text-align: center;
+}
+
+.grand {
+  width: 100%;
+  flex: auto;
+}
+
+.div33 {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+
+.jogo {
+  border: 1px solid rgb(0, 0, 0);
+  height: 100px;
+}

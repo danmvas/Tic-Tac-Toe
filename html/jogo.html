@@ -10,7 +10,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Playfair+Display&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="jogo.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/jogo.css">
 
 </head>
 
@@ -22,27 +23,23 @@
         <h1 id="title">TicTacToe: Let's Play!</h1>
 
         <p>
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <h3>Jogador: X</h3>
-                    </td>
-                    <td>Trocar símbolo<br><button>⇄</button></td>
-                    <td>
-                        <h3>Bot: O</h3>
-                    </td>
-                </tr>
-                <tr>
-                    <td>0</td>
-                    <td></td>
-                    <td>0</td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="grand">
+            <div class="div33">
+                <h3>Jogador: X</h3><br>
+                <h1>0</h1><br>
+            </div>
+            <div class="div33">
+                Trocar símbolo<br>
+                <button>⇄</button>
+            </div>
+            <div class="div33">
+                <h3>Bot: O</h3><br>
+                <h1>0</h1><br>
+            </div>
+        </div>
         </p>
 
-        <table >
+        <table>
             <tbody>
                 <tr>
                     <td class="jogo" id="c1"></td>

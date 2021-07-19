@@ -10,7 +10,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Playfair+Display&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/cadastro.css">
 
 </head>
 
@@ -21,32 +22,39 @@
 
         <h1 id="title">TicTacToe: Let's Play!</h1>
 
+        <h2 id="subtitle">Registre-se</h2>
+
         <forms>
             <p>
                 <label><span style="color:black">Usuário</span></label><br>
                 <input type="text">
+
+            </p>
+            <p>
+                <label><span style="color:black">eMail</span></label><br>
+                <input type="text">
+
             </p>
             <p>
                 <label><span style="color:black">Senha</span></label><br>
                 <input type="password">
+
             </p>
             <p>
-                <span><a id="forgotpassword" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Esqueceu a
-                        senha?</a></span>
+                <label><span style="color:black">Insira a senha novamente</span></label><br>
+                <input type="password">
             </p>
         </forms>
 
-        <a href="jogo.html">
-            <button id="login-button">
-                <p id="login-text">Login</p>
+        <a href="login.html">
+            <button id="botaoGrande">Cadastrar
             </button>
         </a>
 
         <div id="grey-bar">
-            <p align="right">Ainda não possui uma conta?
-                <a href="cadastro.html"><button id="cadastrar">Cadastre-se!</button></a>
-            </p>
+            Já possui uma conta? <a href="../html/login.html">Login</a>
         </div>
+    </div>
 </body>
 
 </html>

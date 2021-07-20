@@ -22,34 +22,36 @@
 
         <h1 id="title">TicTacToe: Let's Play!</h1>
 
-        <h2 id="subtitle">Registre-se</h2>
+        <h2 id="subtitle">Cadastre-se</h2>
 
-        <forms>
-            <p>
-                <label><span style="color:black">Usuário</span></label><br>
-                <input type="text">
+        <form method="post">
+            <div class="texto">
+                <input type="text" required>
+                <label>Usuário</label>
+            </div>
 
-            </p>
-            <p>
-                <label><span style="color:black">eMail</span></label><br>
-                <input type="text">
+            <div class="texto">
+                <input type="text" required>
+                <label>E-Mail</label>
+            </div>
 
-            </p>
-            <p>
-                <label><span style="color:black">Senha</span></label><br>
-                <input type="password">
+            <div class="texto">
+                <input type="password" required>
+                <label>Senha</label>
+            </div>
 
-            </p>
-            <p>
-                <label><span style="color:black">Insira a senha novamente</span></label><br>
-                <input type="password">
-            </p>
-        </forms>
+            <div class="texto">
+                <input type="password" required>
+                <label>Insira a senha novamente</label>
+            </div>
+        </form>
 
+    <p>
         <a href="login.html">
             <button id="botaoGrande">Cadastrar
             </button>
         </a>
+    </p>
 
         <div id="grey-bar">
             Já possui uma conta? <a href="../html/login.html">Login</a>

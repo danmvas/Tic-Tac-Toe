@@ -1,21 +1,15 @@
 #grad {
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 0, 0, 0),
-    rgba(46, 7, 119)
-  );
+  background-image: linear-gradient(120deg, rgb(8, 0, 10), rgb(76, 24, 39));
+  height: 100vh;
+  overflow: hidden;
 }
 
-/*#grad {
-  background-image: linear-gradient(to right, rgb(8, 0, 10), rgb(76, 24, 39));
-}*/
-
 #container {
-  background-color: rgba(255, 255, 255, 0.808);
+  background-color: rgb(255, 255, 255);
   width: 400px;
   border: 1px solid rgb(0, 0, 0);
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 50px;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
@@ -24,7 +18,7 @@
 
 #title {
   font-size: 40px;
-  color: rgba(6, 8, 116, 0.842);
+  color: rgb(76, 24, 39);
   text-align: center;
   font-family: "Playfair Display";
 }
@@ -46,11 +40,11 @@
 }
 
 #botaoGrande {
-  background-color: rgb(197, 187, 238);
+  background-color: rgb(138, 43, 70);
   width: 400px;
   height: 40px;
-  border-radius: 2px;
-  border: 1px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  border: 1px solid rgb(0,0,0);
   margin-top: 10px;
   margin-bottom: 5px;
   transition: 0.2s;
@@ -58,11 +52,12 @@
   font-family: "Playfair Display";
   font-size: 20px;
   margin-top: 5px;
-  transition: 100ms;
+  transition: .5s;
+  color:rgb(255, 255, 255);
 }
 
 #botaoGrande:hover {
-  background-color: rgb(155, 141, 216);
+  background-color: rgb(76, 24, 39);
   color: rgba(255, 255, 255, 0.808);
 }
 
@@ -75,6 +70,8 @@
   margin: -20px;
   margin-top: 5px;
   text-align: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .center form {
@@ -99,11 +96,28 @@ form .texto {
 }
 
 .texto label {
-  position: relative;
-  top: -5px;
+  position: absolute;
+  top: 50%;
   left: 5px;
   color: #adadad;
   transform: translateY(-50%);
   font-size: 16px;
   pointer-events: none;
+  transition: .5s;
+}
+
+.texto span::before{
+  content:'';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgb(76, 24, 39);
+}
+
+.texto input:focus ~ label,
+.texto input:valid ~ label{
+  top: -5px;
+  color: rgb(76, 24, 39);
 }

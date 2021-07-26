@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Management</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/listagem.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <div id="principal">
+
+        <header>
+            <div id="titulo">User <b>Management</b></div>
+            <button onclick="location.href = 'formulario.html'" class="botoesHeader"><i class="bi bi-plus-circle-fill"
+                    style="font-size:15px;"></i> Add New User</button>
+            <button class="botoesHeader"><i class="bi bi-file-earmark-fill" style="font-size:15px;"></i> Export to
+                Excel</button>
+
+        </header>
+
+        <div id="contents">
+
+            <div id="tabled">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col">#</th>
+                            <th class="col">Name</th>
+                            <th class="col">Date Created</th>
+                            <th class="col">Role</th>
+                            <th class="col">Status</th>
+                            <th class="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <th>1</th>
+                            <th class="nome"><img class="statusIcon"
+                                    src="https://66.media.tumblr.com/586c51982efe2de5174cb3d4fa0f9565/tumblr_ocbo6vk0D41t4osjeo1_400.png">
+                                Anaïs Galahad</th>
+                            <th>04/10/2013</th>
+                            <th>Admin</th>
+                            <th><i class="bi bi-record-fill" style="font-size:15px; color:#62BB62;"></i> Active</th>
+                            <th><button class="action"><i class="bi bi-gear-fill"
+                                        style="font-size:15px; color:#289ae7;"></i></button>
+                                <button onclick="ob_adRows.delRow(this)" class="action"><i class="bi bi-x-circle-fill"
+                                        style="font-size:15px; color:red;"></i></button>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <th class="nome"><img class="statusIcon"
+                                    src="https://th.bing.com/th/id/OIP.QZSZpsDOK5LTbkfQ8PWXOQAAAA?pid=ImgDet&rs=1">
+                                Finnick Campbell</th>
+                            <th>05/08/2014</th>
+                            <th>Publisher</th>
+                            <th><i class="bi bi-record-fill" style="font-size:15px; color:#62BB62;"></i> Active</th>
+                            <th><button class="action"><i class="bi bi-gear-fill"
+                                        style="font-size:15px; color:#289ae7;"></i></button>
+                                <button onclick="ob_adRows.delRow(this)" class="action"><i class="bi bi-x-circle-fill"
+                                        style="font-size:15px; color:red;"></i></button>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <th class="nome"><img class="statusIcon"
+                                    src="https://pbs.twimg.com/media/CkgwI0vWUAQBASl.jpg">
+                                Damián Santiago</th>
+                            <th>11/05/2015</th>
+                            <th>Publisher</th>
+                            <th><i class="bi bi-record-fill" style="font-size:15px; color:#DB544F;"></i> Suspended</th>
+                            <th><button class="action"><i class="bi bi-gear-fill"
+                                        style="font-size:15px; color:#289ae7;"></i></button>
+                                <button onclick="ob_adRows.delRow(this)" class="action"><i class="bi bi-x-circle-fill"
+                                        style="font-size:15px; color:red;"></i></button>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <th class="nome"><img class="statusIcon"
+                                    src="https://64.media.tumblr.com/41d612238c531df838269082f2af9165/tumblr_ovvawrqqTx1wyjt5co2_400.png">Miguel
+                                García</th>
+                            <th>06/09/2016</th>
+                            <th>Reviewer</th>
+                            <th><i class="bi bi-record-fill" style="font-size:15px; color:#62BB62;"></i> Active</th>
+                            <th><button class="action"><i class="bi bi-gear-fill"
+                                        style="font-size:15px; color:#289ae7;"></i></button>
+                                <button onclick="ob_adRows.delRow(this)" class="action"><i class="bi bi-x-circle-fill"
+                                        style="font-size:15px; color:red;"></i></button>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <th class="nome"><img class="statusIcon"
+                                    src="https://th.bing.com/th/id/OIP.iw9D1Q61kFeIiaFdjKkfYgHaHa?pid=ImgDet&rs=1">
+                                Spencer Quinzel</th>
+                            <th>12/08/2017</th>
+                            <th>Moderator</th>
+                            <th><i class="bi bi-record-fill" style="font-size:15px; color:#F2B05C;"></i> Inactive</th>
+                            <th><button class="action"><i class="bi bi-gear-fill"
+                                        style="font-size:15px; color:#289ae7;"></i></button>
+                                <button onclick="ob_adRows.delRow(this)" class="action"><i class="bi bi-x-circle-fill"
+                                        style="font-size:15px; color:red;"></i></button>
+                            </th>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <footer>
+                <div id="bot-ent">Showing <b>5</b> out of <b>25</b> entries</div>
+                <div id="bot-pag">Previous
+                    <button class="not-selec">1</button>
+                    <button class="not-selec">2</button>
+                    <button class="not-selec">3</button>
+                    <button class="not-selec">4</button>
+                    <button class="not-selec">5</button>
+                    Next
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

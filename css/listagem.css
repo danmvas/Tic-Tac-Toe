@@ -1,0 +1,142 @@
+body {
+  background-color: #f7f7f7;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+header {
+  background-color: #289ae7;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+footer {
+  padding: 10px;
+  color: #a3adbe;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#principal {
+  width: 900px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  border-radius: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#titulo {
+  color: white;
+  font-size: 30px;
+  width: 33%;
+}
+
+#contents {
+  background-color: white;
+  color: #556586;
+  padding: 40px;
+}
+
+#bot-pag {
+  float: right;
+  margin-top: 10px;
+}
+
+#bot-ent {
+  float: left;
+  margin-top: 10px;
+}
+
+.botoesHeader {
+  color: #556586;
+  background-color: white;
+  width: 16%;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 3px;
+  float: right;
+  margin: 5px;
+  margin-top: -30px;
+  cursor: pointer;
+  border: none;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.botoesHeader:active {
+  background-color: #a3adbe;
+}
+
+#tabled {
+  padding: 2px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.col {
+  font-weight: 700;
+  padding: 0.7em;
+  text-align: left;
+  padding-left: 2.4em;
+  height: 15px;
+  vertical-align: middle;
+}
+
+.nome {
+  font-weight: bold;
+  vertical-align: middle;
+  padding-top: -50px;
+}
+
+th {
+  font-weight: 100;
+  text-align: left;
+  padding-left: 2em;
+  height: 70px;
+}
+
+tr {
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.statusIcon {
+  margin-right: 0.5em;
+  border-radius: 100%;
+  max-width: 50px;
+}
+
+.action {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.not-selec {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  margin-left: 5px;
+}
+
+.not-selec:focus {
+  background-color: #00a3ee;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 5px;
+}

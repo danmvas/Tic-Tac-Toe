@@ -73,6 +73,11 @@ footer {
   background-color: #a3adbe;
 }
 
+.excluir-linha {
+  font-size: 15px !important;
+  color: red !important;
+}
+
 #tabled {
   padding: 2px;
   margin-bottom: 10px;

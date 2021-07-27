@@ -1,3 +1,5 @@
+/********************* menos espec[ificos!!!!!! *********************/
+
 body {
   background-color: white;
   font-family: "Source Sans Pro", sans-serif;
@@ -24,48 +26,6 @@ footer {
   border-top: 1px solid darkgray;
 }
 
-#principal {
-  width: 600px;
-  color: #59595e;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  position: fixed;
-  border-radius: 5px;
-  font-family: "Source Sans Pro", sans-serif;
-  box-shadow: 0 0 1em;
-}
-
-#corpo {
-  padding: 20px;
-  margin-left: -20px;
-  height: 330px;
-}
-
-h3 {
-  font-weight: 100;
-}
-
-.row1 {
-  height: 30px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: 19px;
-  margin-right: 50px;
-}
-
-.row {
-  height: 30px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-  margin-top: 20px;
-}
-
 input,
 label {
   display: block;
@@ -75,83 +35,58 @@ input::placeholder {
   color: lightgray;
 }
 
-#savechang {
-  color: white;
-  background-color: #d75745;
-  width: 30%;
-  height: 40px;
-  text-align: center;
-  vertical-align: middle;
-  padding: 5px;
-  font-size: 15px;
-  border-radius: 3px;
-  margin: 5px;
-  cursor: pointer;
-  border: none;
-  font-family: "Source Sans Pro", sans-serif;
+h1 {
+  margin-top: 10px;
 }
 
-#birthd {
+h3 {
+  font-weight: 100;
+  margin-bottom: -1px;
+}
+
+/********************* classes!!!!!! *********************/
+
+.box {
+  display: flex;
+}
+
+.box1 {
+  display: flex;
   margin-top: 20px;
-  margin-bottom: -29px;
-  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+  justify-content: center;
 }
 
-#imgwarn {
-  background-color: #fefbf7;
-  border: 1px solid orange;
-  color: orange;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 15px;
+.one {
+  flex: 1;
+  width: 50%;
 }
 
-#uplpic {
-  color: white;
-  background-color: #565961;
+.row {
   width: 100%;
-  height: 40px;
-  text-align: center;
-  vertical-align: middle;
-  padding: 5px;
-  font-size: 15px;
-  border-radius: 3px;
-  margin: 5px;
-  cursor: pointer;
-  border: none;
-  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-#delpic {
-  color: black;
-  background-color: #e6e8ed;
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  vertical-align: middle;
-  padding: 5px;
-  font-size: 15px;
-  border-radius: 3px;
-  margin: 5px;
-  cursor: pointer;
-  border: none;
-  font-family: "Source Sans Pro", sans-serif;
+.item {
+  width: 45%;
+}
+
+.secondrow {
+  width: 32%;
+}
+
+.gambs {
+  width: 95%;
 }
 
 .date {
-  width: 175px;
+  width: 32%;
   color: #565961;
   font-family: "Source Sans Pro", sans-serif;
-}
-
-#infoCircle {
-  font-size: 15px;
-  color: #f2b05c;
-  transition: 0.3s;
-}
-
-#infoCircle:hover {
-  color: rgb(223, 146, 5);
 }
 
 .tooltip {
@@ -166,6 +101,7 @@ input::placeholder {
   color: orange;
   border: 1px solid orange;
   text-align: left;
+  font-size: 12px;
   border-radius: 6px;
   padding: 10px;
   position: absolute;
@@ -193,20 +129,117 @@ input::placeholder {
   opacity: 1;
 }
 
-#lastname {
-  margin-top: 2px;
-  width: 300px;
+.round {
+  cursor: pointer;
+  border-radius: 4px;
+  border: solid 1px rgb(107, 107, 107);
+  height: 22px;
 }
 
-.gambs {
-  width: 250px;
+/********************* ids!!!!!! *********************/
+
+#corpo {
+  padding: 20px;
 }
 
-.gambs2 {
-  width: 275px;
+#principal {
+  width: 600px;
+  color: #59595e;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  border-radius: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+  box-shadow: 0 0 1em;
 }
 
-.gambs3 {
-  width: 33%;
+#infoCircle {
+  font-size: 13px;
+  color: #f2b05c;
+  transition: 0.3s;
+}
+
+#infoCircle:hover {
+  color: rgb(223, 146, 5);
+  transition: 0.5s;
+}
+
+#firstrow {
+  width: 97%;
+}
+
+#firstfirstrow {
+  width: 90%;
+}
+
+#savechang {
+  color: white;
+  background-color: #d75745;
+  width: 30%;
+  height: 40px;
   text-align: center;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 10px;
+}
+
+#birthd {
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+
+#imgwarn {
+  background-color: #fefbf7;
+  border: 1px solid orange;
+  color: orange;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 11px;
+  margin-right: 20px;
+  margin-left: -40px;
+  width: 160px;
+}
+
+#uplpic {
+  color: white;
+  background-color: #565961;
+  width: 70%;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#delpic {
+  color: black;
+  background-color: #e6e8ed;
+  width: 70%;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#foto {
+  width: 100px;
+  box-align: center;
 }

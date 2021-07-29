@@ -8,11 +8,8 @@
   border: 1px solid rgb(0, 0, 0);
 }
 
-#linktransicao {
-  color: darkblue;
-  transition: 0.3s;
-}
-
-#linktransicao:hover {
-  color: grey;
+#forgotpassword {
+  padding-left: 30px;
+  margin-top: -90px;
+  font-family: "Source Sans Pro", sans-serif;
 }

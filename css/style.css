@@ -4,6 +4,42 @@ form .texto {
   position: relative;
   border-bottom: 2px solid #adadad;
   margin: 30px;
+  width: 60%;
+  margin-left: 30px;
+}
+
+footer {
+  padding: 10px;
+  padding-bottom: 15px;
+  background-color: #fafafa;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+  border-top: 1px solid darkgray;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+header {
+  background-color: #551329;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  margin-top: 10px;
+  color: #f7f7f7;
+}
+
+h3 {
+  font-weight: lighter;
+  font-size: 18px !important;
 }
 
 /********************* classes!!!!!! *********************/
@@ -16,6 +52,7 @@ form .texto {
   border: none;
   background: none;
   outline: none;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .texto label {
@@ -27,6 +64,7 @@ form .texto {
   font-size: 16px;
   pointer-events: none;
   transition: 0.5s;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .texto span::before {
@@ -53,23 +91,29 @@ form .texto {
   overflow: hidden;
 }
 
-#container {
-  background-color: rgb(255, 255, 255);
-  width: 400px;
-  border: 1px solid rgb(0, 0, 0);
-  padding: 20px;
-  border-radius: 50px;
+#principal {
+  width: 800px;
+  color: #59595e;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
   position: fixed;
+  border-radius: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+  box-shadow: 0 0 1em black;
+  background-color: white;
+}
+
+#corpo {
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
 }
 
 #title {
   font-size: 40px;
-  color: rgb(76, 24, 39);
   text-align: center;
-  font-family: "Playfair Display";
+  font-family: "Source Sans Pro";
 }
 
 #botaopequeno {
@@ -79,8 +123,21 @@ form .texto {
   margin-left: 0%;
   text-align: center;
   transition: 0.3s;
-  font-family: "Playfair Display";
+  font-family: "Source Sans Pro";
   margin-top: 10px;
+}
+
+#container1 {
+  width: 600px;
+  color: #59595e;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  border-radius: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+  box-shadow: 0 0 1em black;
+  background-color: white;
 }
 
 #botaopequeno:hover {
@@ -92,13 +149,13 @@ form .texto {
   background-color: rgb(138, 43, 70);
   width: 400px;
   height: 40px;
-  border-radius: 25px;
+  border-radius: 6px;
   border: 1px solid rgb(0, 0, 0);
   margin-top: 10px;
   margin-bottom: 5px;
   transition: 0.2s;
   text-align: center;
-  font-family: "Playfair Display";
+  font-family: "Source Sans Pro";
   font-size: 20px;
   margin-top: 5px;
   transition: 0.5s;
@@ -121,4 +178,39 @@ form .texto {
   text-align: center;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+
+#forgotpassword {
+  transition: 0.5s;
+}
+
+#center {
+  margin-left: 100px;
+}
+
+#bottom {
+  padding-top: 10px;
+  margin-bottom: -10px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#savechang {
+  color: white;
+  background-color: #d75745;
+  width: 25%;
+  height: 40px;
+  text-align: center;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+#savechang:hover {
+  background-color: #922416;
 }

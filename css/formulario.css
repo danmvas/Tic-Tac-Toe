@@ -6,24 +6,13 @@ body {
 }
 
 header {
-  background-color: #fafafa;
-  color: #59595e;
+  background-color: #551329;
+  color: rgb(226, 226, 226);
   padding: 20px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   font-family: "Source Sans Pro", sans-serif;
   border-bottom: 1px solid darkgray;
-}
-
-footer {
-  padding: 10px;
-  padding-bottom: 15px;
-  color: #a3adbe;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  font-family: "Source Sans Pro", sans-serif;
-  text-align: center;
-  border-top: 1px solid darkgray;
 }
 
 input,
@@ -34,15 +23,6 @@ label {
 
 input::placeholder {
   color: lightgray;
-}
-
-h1 {
-  margin-top: 10px;
-}
-
-h3 {
-  font-weight: lighter;
-  font-size: 18px !important;
 }
 
 /********************* classes!!!!!! *********************/
@@ -89,8 +69,8 @@ h3 {
   visibility: hidden;
   width: 250px;
   background-color: #fefbf7;
-  color: orange;
-  border: 1px solid orange;
+  color: #551329;
+  border: 1px solid #551329;
   text-align: left;
   font-size: 14px;
   border-radius: 6px;
@@ -112,7 +92,7 @@ h3 {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: orange transparent transparent transparent;
+  border-color: #551329 transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
@@ -136,12 +116,15 @@ h3 {
 }
 
 .select-estiloso {
-  text-align: center;
   width: 100%;
-  height: 34px;
-  overflow: hidden;
-  border: 1px solid darkgray;
+  height: 35px;
   border: rgb(107, 107, 107) 1px solid;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: gray;
+  text-align-last: center;
 }
 
 .select-estiloso select {
@@ -153,7 +136,7 @@ h3 {
 
 .select-estiloso:focus {
   outline: none;
-  border-color: orange;
+  border-color: #551329;
   box-shadow: 0 0 2px;
 }
 
@@ -173,38 +156,21 @@ h3 {
 
 .form-field:focus {
   outline: none;
-  border-color: orange;
+  border-color: #551329;
   box-shadow: 0 0 2px;
 }
 
 /********************* ids!!!!!! *********************/
 
-#corpo {
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-#principal {
-  width: 800px;
-  color: #59595e;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  position: fixed;
-  border-radius: 5px;
-  font-family: "Source Sans Pro", sans-serif;
-  box-shadow: 0 0 1em;
-}
-
 #infoCircle {
   font-size: 13px;
-  color: #f2b05c;
+  color: #921941;
   transition: 0.3s;
   float: left;
 }
 
 #infoCircle:hover {
-  color: rgb(223, 146, 5);
+  color: #3a0416;
   transition: 0.5s;
 }
 
@@ -229,27 +195,6 @@ h3 {
   margin-right: -30px;
 }
 
-#savechang {
-  color: white;
-  background-color: #d75745;
-  width: 25%;
-  height: 40px;
-  text-align: center;
-  padding: 5px;
-  font-size: 15px;
-  border-radius: 3px;
-  margin: 5px;
-  cursor: pointer;
-  border: none;
-  font-family: "Source Sans Pro", sans-serif;
-  margin-top: 10px;
-  transition: 0.3s;
-}
-
-#savechang:hover {
-  background-color: #922416;
-}
-
 #birthd {
   padding-bottom: 25px;
   width: 100%;
@@ -257,8 +202,8 @@ h3 {
 
 #imgwarn {
   background-color: #fefbf7;
-  border: 1px solid orange;
-  color: orange;
+  border: 1px solid #921941;
+  color: #921941;
   padding: 15px;
   border-radius: 5px;
   margin-top: 15px;
@@ -281,6 +226,11 @@ h3 {
   cursor: pointer;
   border: none;
   font-family: "Source Sans Pro", sans-serif;
+  transition: 0.3s;
+}
+
+#uplpic:hover {
+  background-color: #424446;
 }
 
 #delpic {
@@ -297,6 +247,11 @@ h3 {
   cursor: pointer;
   border: none;
   font-family: "Source Sans Pro", sans-serif;
+  transition: 0.3s;
+}
+
+#delpic:hover {
+  background-color: #ccced3;
 }
 
 #foto {

@@ -11,12 +11,11 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/formulario.css">
 
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet'>
 </head>
 
-<body>
+<body id="grad">
 
     <div id="principal">
 
@@ -66,8 +65,8 @@
                 </div>
                 <div class="one">
                     <label>Mobile Phone</label>
-                    <input class="form-field wid100" type="email" pattern="[0-9]*" placeholder="ex. (00) 00000-0000"
-                        aria-label="Last name" pattern="^\w*(\.\w*)?@\w*\.[a-z]+(\.[a-z]+)?$" required>
+                    <input class="form-field wid100" type="text" pattern="[0-9]*" placeholder="ex. (00) 00000-0000"
+                        required>
                 </div>
             </div>
 
@@ -76,11 +75,12 @@
                 <div id="birthd">Birthday</div>
                 <div class="box-terceiro">
 
-
                     <div class="one">
                         <!-- DIA -->
                         <select name="" class="date round select-estiloso" id="row1" required>
-                            <option value="0">Day</option>
+                            <option disabled selected value>
+                                <div style="text-align: center;">Day</div>
+                            </option>
                             <option value="01">01</option>
                             <option value="02">02</option>
                             <option value="03">03</option>
@@ -117,7 +117,7 @@
                     <div class="one">
                         <!-- MÊS -->
                         <select name="" class="date round wid97 select-estiloso" id="row2" required>
-                            <option value="" selected>Month</option>
+                            <option disabled selected value>Month </option>
                             <option value="01">January</option>
                             <option value="02">February</option>
                             <option value="03">March</option>
@@ -136,7 +136,7 @@
                     <div class="one">
                         <!-- ANO -->
                         <select name="" class="date round select-estiloso" required>
-                            <option value="0">Year</option>
+                            <option disabled selected value>Year</option>
                             <option value="2020">2020</option>
                             <option value="2019">2019</option>
                             <option value="2018">2018</option>

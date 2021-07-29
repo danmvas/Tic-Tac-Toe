@@ -7,10 +7,9 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Tic Tac Let's Play!</title>
+    <title>Login</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Playfair+Display&display=swap"
-        rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/login.css">
 
@@ -19,36 +18,55 @@
 <!-- the user is going to see this -->
 
 <body id="grad">
-    <div id="container">
+    <div id="container1">
 
-        <h1 id="title">TicTacToe: Let's Play!</h1>
+        <header>
+            <h1 id="title">TicTacToe: Let's Play!</h1>
+        </header>
 
-        <form method="post">
-            <div class="texto">
-                <input type="text" required>
-                <label>Usuário</label>
-            </div>
+        <div id="container">
+            <form method="post">
+                <div id="center">
+                    <div class="texto">
+                        <input type="text" required>
+                        <label>Usuário</label>
+                    </div>
+                </div>
 
-            <div class="texto">
-                <input type="password" required>
-                <label>Senha</label>
-            </div>
+                <div id="center">
+                    <div class="texto">
+                        <input type="password" required>
+                        <label>Senha</label>
+                    </div>
+                </div>
 
-            <div class="pass"><span><a id="forgotpassword" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Esqueceu a
-                        senha?</a></span></div>
+                <div>
+                    <span id="forgotpassword">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Esqueceu a
+                            senha?</a>
+                    </span>
+                </div>
 
-            <p><a href="jogo.html">
-                <button id="botaoGrande">Login</button>
-            </a></p>
-        </form>
+                <div id="center">
+                    <p><a href="jogo.html">
+                            <button id="botaoGrande">Login</button>
+                        </a></p>
+                </div>
+            </form>
 
-        
-
-        <div id="grey-bar">
-            <div class="linkTransicao">
-                Ainda não possui uma conta? <a id="forgotpassword" href="../html/cadastro.html">Cadastre-se</a>
-            </div>
         </div>
+
+        <footer id="center-footer">
+            <div>
+                Ainda não possui uma conta?
+                <div>
+                    <a href="../html/formulario.html">Cadastre-se</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
 </body>
 
 </html>

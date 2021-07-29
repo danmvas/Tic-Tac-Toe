@@ -1,27 +1,5 @@
 /********************* menos espec[ificos!!!!!! *********************/
 
-body {
-  background-color: #f7f7f7;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-header {
-  background-color: #289ae7;
-  padding: 10px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-footer {
-  padding: 10px;
-  color: #a3adbe;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  font-family: "Source Sans Pro", sans-serif;
-  margin-bottom: 15px;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -134,7 +112,7 @@ tr {
 }
 
 .not-selec:focus {
-  background-color: #00a3ee;
+  background-color: #551329;
   color: white;
   border: none;
   padding: 6px;
@@ -158,7 +136,7 @@ tr {
   position: fixed;
   border-radius: 5px;
   font-family: "Source Sans Pro", sans-serif;
-  box-shadow: 0 0 1em;
+  box-shadow: 0 0 1em black;
 }
 
 #titulo {
@@ -172,6 +150,7 @@ tr {
   color: #556586;
   padding: 30px;
   padding-top: 10px;
+  margin-bottom: -15px;
 }
 
 #col-principal {
@@ -191,4 +170,11 @@ tr {
 #tabled {
   padding: 2px;
   margin-bottom: 10px;
+}
+
+#ajustes {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 40px;
 }

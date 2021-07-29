@@ -17,7 +17,7 @@ header {
 
 footer {
   padding: 10px;
-  height: 50px;
+  padding-bottom: 15px;
   color: #a3adbe;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -29,6 +29,7 @@ footer {
 input,
 label {
   display: block;
+  padding-bottom: 5px;
 }
 
 input::placeholder {
@@ -40,51 +41,41 @@ h1 {
 }
 
 h3 {
-  font-weight: 100;
-  margin-bottom: -1px;
+  font-weight: lighter;
+  font-size: 18px !important;
 }
 
 /********************* classes!!!!!! *********************/
 
-.box {
+.box-primeiro {
   display: flex;
+  margin-top: 0px;
 }
 
-.box1 {
+.box-segundo {
   display: flex;
   margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 60px;
-  justify-content: center;
+}
+
+.box-terceiro {
+  display: flex;
+  margin-top: -20px;
 }
 
 .one {
   flex: 1;
   width: 50%;
-}
-
-.row {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 20px;
 }
 
-.item {
-  width: 45%;
-}
-
-.secondrow {
-  width: 32%;
-}
-
-.gambs {
-  width: 95%;
+.two {
+  flex: 1;
+  width: 50%;
+  padding-left: 50px;
+  box-sizing: border-box;
 }
 
 .date {
-  width: 32%;
   color: #565961;
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -96,12 +87,12 @@ h3 {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 230px;
+  width: 250px;
   background-color: #fefbf7;
   color: orange;
   border: 1px solid orange;
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 6px;
   padding: 10px;
   position: absolute;
@@ -136,14 +127,65 @@ h3 {
   height: 22px;
 }
 
+.wid100 {
+  width: 100%;
+}
+
+.wid97 {
+  width: 300px;
+}
+
+.select-estiloso {
+  text-align: center;
+  width: 100%;
+  height: 34px;
+  overflow: hidden;
+  border: 1px solid darkgray;
+  border: rgb(107, 107, 107) 1px solid;
+}
+
+.select-estiloso select {
+  background: transparent; /* importante para exibir o novo ícone */
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.select-estiloso:focus {
+  outline: none;
+  border-color: orange;
+  box-shadow: 0 0 2px;
+}
+
+.form-field {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 6px;
+  transition: border 0.3s ease;
+  border: rgb(107, 107, 107) 1px solid;
+  box-sizing: border-box;
+}
+
+.form-field::placeholder {
+  color: gray;
+}
+
+.form-field:focus {
+  outline: none;
+  border-color: orange;
+  box-shadow: 0 0 2px;
+}
+
 /********************* ids!!!!!! *********************/
 
 #corpo {
   padding: 20px;
+  box-sizing: border-box;
 }
 
 #principal {
-  width: 600px;
+  width: 800px;
   color: #59595e;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -158,6 +200,7 @@ h3 {
   font-size: 13px;
   color: #f2b05c;
   transition: 0.3s;
+  float: left;
 }
 
 #infoCircle:hover {
@@ -166,17 +209,30 @@ h3 {
 }
 
 #firstrow {
-  width: 97%;
+  width: 95%;
 }
 
-#firstfirstrow {
-  width: 90%;
+#row1 {
+  width: 95%;
+}
+
+#row2 {
+  width: 95%;
+}
+
+#espacinho {
+  margin-top: 20px;
+}
+
+#vaipradireita {
+  margin-left: 40px;
+  margin-right: -30px;
 }
 
 #savechang {
   color: white;
   background-color: #d75745;
-  width: 30%;
+  width: 25%;
   height: 40px;
   text-align: center;
   padding: 5px;
@@ -187,11 +243,16 @@ h3 {
   border: none;
   font-family: "Source Sans Pro", sans-serif;
   margin-top: 10px;
+  transition: 0.3s;
+}
+
+#savechang:hover {
+  background-color: #922416;
 }
 
 #birthd {
-  margin-top: 20px;
-  margin-bottom: -20px;
+  padding-bottom: 25px;
+  width: 100%;
 }
 
 #imgwarn {
@@ -200,17 +261,16 @@ h3 {
   color: orange;
   padding: 15px;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 15px;
   font-size: 11px;
-  margin-right: 20px;
   margin-left: -40px;
-  width: 160px;
+  width: 181px;
 }
 
 #uplpic {
   color: white;
   background-color: #565961;
-  width: 70%;
+  width: 75%;
   height: 40px;
   text-align: center;
   vertical-align: middle;
@@ -226,7 +286,7 @@ h3 {
 #delpic {
   color: black;
   background-color: #e6e8ed;
-  width: 70%;
+  width: 75%;
   height: 40px;
   text-align: center;
   vertical-align: middle;
@@ -242,4 +302,12 @@ h3 {
 #foto {
   width: 100px;
   box-align: center;
+}
+
+#tira-bordas {
+  border: none;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 1px;
+  cursor: auto;
 }

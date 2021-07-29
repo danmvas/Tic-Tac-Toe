@@ -1,3 +1,5 @@
+/********************* menos espec[ificos!!!!!! *********************/
+
 body {
   background-color: #f7f7f7;
   font-family: "Source Sans Pro", sans-serif;
@@ -17,39 +19,28 @@ footer {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 15px;
 }
 
-#principal {
-  width: 900px;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  position: fixed;
-  border-radius: 5px;
+table {
+  width: 100%;
+  border-collapse: collapse;
   font-family: "Source Sans Pro", sans-serif;
 }
 
-#titulo {
-  color: white;
-  font-size: 30px;
-  width: 33%;
+th {
+  font-weight: 100;
+  text-align: left;
+  height: 70px;
+  vertical-align: middle;
 }
 
-#contents {
-  background-color: white;
-  color: #556586;
-  padding: 40px;
+tr {
+  border-bottom: 1px solid #cfcfcf;
+  vertical-align: middle;
 }
 
-#bot-pag {
-  float: right;
-  margin-top: 10px;
-}
-
-#bot-ent {
-  float: left;
-  margin-top: 10px;
-}
+/********************* classes!!!!!! *********************/
 
 .botoesHeader {
   color: #556586;
@@ -78,47 +69,51 @@ footer {
   color: red !important;
 }
 
-#tabled {
-  padding: 2px;
-  margin-bottom: 10px;
+.engrenagem {
+  font-size: 15px !important;
+  color: #289ae7 !important;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-family: "Source Sans Pro", sans-serif;
+.active-user {
+  font-size: 15px !important;
+  color: #62bb62 !important;
+}
+
+.suspended-user {
+  font-size: 15px;
+  color: #db544f;
+}
+
+.inactive-user {
+  font-size: 15px;
+  color: #f2b05c;
 }
 
 .col {
-  font-weight: 700;
-  padding: 0.7em;
   text-align: left;
-  padding-left: 2.4em;
+  padding: 10px;
+  box-sizing: border-box;
   height: 15px;
   vertical-align: middle;
 }
 
 .nome {
   font-weight: bold;
-  vertical-align: middle;
-  padding-top: -50px;
-}
-
-th {
-  font-weight: 100;
-  text-align: left;
-  padding-left: 2em;
-  height: 70px;
-}
-
-tr {
-  border-bottom: 1px solid #cfcfcf;
+  float: left;
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-left: 10px;
+  height: 50px;
 }
 
 .statusIcon {
   margin-right: 0.5em;
   border-radius: 100%;
   max-width: 50px;
+}
+
+.img-left {
+  float: left;
 }
 
 .action {
@@ -144,4 +139,56 @@ tr {
   border: none;
   padding: 6px;
   border-radius: 5px;
+}
+
+.image {
+  min-width: 250px;
+  min-height: 250px;
+  padding: 13px;
+  display: inline-block;
+}
+
+/********************* ids!!!!!! *********************/
+
+#principal {
+  width: 900px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  border-radius: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+  box-shadow: 0 0 1em;
+}
+
+#titulo {
+  color: white;
+  font-size: 30px;
+  width: 33%;
+}
+
+#contents {
+  background-color: white;
+  color: #556586;
+  padding: 30px;
+  padding-top: 10px;
+}
+
+#col-principal {
+  font-weight: bold;
+}
+
+#bot-pag {
+  float: right;
+  margin-top: 5px;
+}
+
+#bot-ent {
+  float: left;
+  margin-top: 10px;
+}
+
+#tabled {
+  padding: 2px;
+  margin-bottom: 10px;
 }

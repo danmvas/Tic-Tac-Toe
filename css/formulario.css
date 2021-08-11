@@ -160,6 +160,10 @@ input::placeholder {
   box-shadow: 0 0 2px;
 }
 
+.firstrow {
+  width: 95%;
+}
+
 /********************* ids!!!!!! *********************/
 
 #infoCircle {
@@ -172,10 +176,6 @@ input::placeholder {
 #infoCircle:hover {
   color: #3a0416;
   transition: 0.5s;
-}
-
-#firstrow {
-  width: 95%;
 }
 
 #row1 {

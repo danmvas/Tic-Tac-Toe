@@ -28,7 +28,7 @@ tr {
   text-align: center;
   vertical-align: middle;
   padding: 5px;
-  font-size: 14px;
+  font-size: 15px;
   border-radius: 3px;
   float: right;
   margin: 5px;
@@ -42,12 +42,12 @@ tr {
   background-color: #a3adbe;
 }
 
-.excluir-linha {
+.redX {
   font-size: 15px !important;
   color: red !important;
 }
 
-.engrenagem {
+.cog {
   font-size: 15px !important;
   color: #289ae7 !important;
 }

@@ -37,7 +37,7 @@ const userService =
         
         if (window.confirm("Do you really want to edit this user?")) {  
             var tempUser = getGUID(userObject, tableIndex)
-            window.location.href = '../html/form.html?id=' + tempUser
+            window.location.href = '../form.html?id=' + tempUser
         }
         
     },

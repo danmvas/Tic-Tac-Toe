@@ -46,6 +46,7 @@ input::placeholder {
   flex: 1;
   width: 50%;
   justify-content: space-between;
+  padding: 0 10px;
 }
 
 .two {
@@ -161,7 +162,7 @@ input::placeholder {
 }
 
 .firstrow {
-  width: 95%;
+  width: 100%;
 }
 
 /********************* ids!!!!!! *********************/

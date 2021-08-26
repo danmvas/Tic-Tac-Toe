@@ -36,11 +36,11 @@
 //   localStorage.setItem('passport', passport)
 
 //   if (localStorage.getItem("updateUser")) {
-//     window.location.href = "../html/userManagement.html"
+//     window.location.href = "../list.html"
 //   }
 
 //   if (name && role && password && status != 0 && day != 0 && month != 0 && year != 0 && localStorage.getItem('imageUrl')) {
-//     window.location.href = "../html/userManagement.html"
+//     window.location.href = "../list.html"
 //   }
 //   else {
 //     alert("Please fill all the ")
@@ -100,14 +100,14 @@
 
 //função que verifica se o formulário está preenchido corretamente
 var button = document.getElementById("savechang")
-function onSaveChangesClick() {
+function save() {
      if (inputVerify()) {
           userService.add()
-          window.location = "../html/userManagement.html"
+          window.location = "../list.html"
      } else {
           alert("Please verify your inputs!")
      }
-} button.addEventListener("click", onSaveChangesClick)
+} button.addEventListener("click", save)
 
 
 function inputVerify() {
@@ -169,7 +169,7 @@ document.querySelectorAll('input').forEach(($input) => {
 
 //função que preenche os campos do formulário com as informações
 //já existentes
-function onClickUpdate(idUser) {
+function getExistentInfo(idUser) {
      var tempUser = userService.searchById(idUser)
      
      tempUser.name = document.getElementById("firstName").value

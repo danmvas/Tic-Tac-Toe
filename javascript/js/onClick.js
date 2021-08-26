@@ -5,28 +5,28 @@
 //----------------------------------------------
 
 if (location.search != ''){
-     onClickUpdate()
+     getExistentInfo()
 }
 
 //----------------------------------------------
 
 //função que verifica se o formulário está preenchido corretamente
 var button = document.getElementById("savechang")
-function onSaveChangesClick() {
+function save() {
      if (inputVerify()) {
           if (location.search === ''){
                userService.add();
-               window.location = "../html/userManagement.html";
+               window.location = "../list.html";
           } else{
                var url = new URLSearchParams(location.search)
                var urlGuid = url.get("id")
                saveUpdate(urlGuid)
-               window.location = "../html/userManagement.html";
+               window.location = "../list.html";
           }
      } else {
           alert("Please verify your inputs!")
      }
-} button.addEventListener("click", onSaveChangesClick)
+} button.addEventListener("click", save)
 
 
 function inputVerify() {
@@ -64,7 +64,6 @@ function inputVerify() {
 
 //----------------------------------------------
 
-// mascara do telefone pra deixar belissimo
 const masks = {
      phone(value) {
           return value
@@ -89,7 +88,7 @@ document.querySelectorAll('input').forEach(($input) => {
 //função que preenche os campos do formulário com as informações
 //já existentes
 
-function onClickUpdate() {
+function getExistentInfo() {
      var url = new URLSearchParams(location.search)
      var urlGuid = url.get("id")
 

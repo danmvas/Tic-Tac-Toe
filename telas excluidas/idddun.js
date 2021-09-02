@@ -55,7 +55,7 @@
 // }
 
 
-// const tBody = document.getElementById('corpoTabela')
+// const tBody = document.getElementById('centralBodyTabela')
 
 // function salvarConteudoStorage() {
 //   let arraycadastro = []

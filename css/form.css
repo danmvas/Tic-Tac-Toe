@@ -27,19 +27,9 @@ input::placeholder {
 
 /********************* classes!!!!!! *********************/
 
-.box-primeiro {
+.box {
   display: flex;
-  margin-top: 0px;
-}
-
-.box-segundo {
-  display: flex;
-  margin-top: 20px;
-}
-
-.box-terceiro {
-  display: flex;
-  margin-top: -20px;
+  margin-bottom: 20px;
 }
 
 .one {
@@ -179,20 +169,6 @@ input::placeholder {
   transition: 0.5s;
 }
 
-#espacinho {
-  margin-top: 20px;
-}
-
-#vaipradireita {
-  margin-left: 40px;
-  margin-right: -30px;
-}
-
-#birthd {
-  padding-bottom: 25px;
-  width: 100%;
-}
-
 #imgwarn {
   background-color: #fefbf7;
   border: 1px solid #921941;
@@ -258,4 +234,8 @@ input::placeholder {
   background-color: white;
   padding: 1px;
   cursor: auto;
+}
+
+#birthd {
+  padding: 0 0 5px 10px;
 }

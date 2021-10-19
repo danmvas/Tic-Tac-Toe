@@ -4,24 +4,23 @@
 
 //----------------------------------------------
 
-if (location.search != ''){
-     getExistentInfo()
-}
+const url = new URLSearchParams(location.search)
+const urlGuid = url.get("guid")
 
 //----------------------------------------------
 
 //função que verifica se o formulário está preenchido corretamente
 var button = document.getElementById("savechang")
-function save() {
+async function save() {
      if (inputVerify()) {
           if (location.search === ''){
-               userService.add();
-               window.location = "../list.html";
+               await userService.add()
+               .then(res => res)
+                    .catch(rej => console.log(rej));
+               window.location = "list.html";
           } else{
-               var url = new URLSearchParams(location.search)
-               var urlGuid = url.get("id")
                saveUpdate(urlGuid)
-               window.location = "../list.html";
+               window.location = "list.html";
           }
      } else {
           alert("Please verify your inputs!")
@@ -30,14 +29,14 @@ function save() {
 
 
 function inputVerify() {
-
+     
      var firstName = document.getElementById("firstName").value;
      var lastName = document.getElementById("lastName").value;
      var email = document.getElementById("email").value;
      var phone = document.getElementById("phone").value;
      var day = document.getElementById("day").value;
      var month = document.getElementById("month").value;
-
+     
      var mailRegex = /^[a-zA-Z0-9.-_]+@[a-zA-Z]+(?:.[a-zA-Z]+)$/
      // var phoneRegex = /[(]^[0-9][)]+@[0-9][-]^[0-9])$/
 
@@ -48,9 +47,9 @@ function inputVerify() {
      } else if (!mailRegex.test(email)) {
           return false
           // }else if (!phoneRegex.test(phone)) {
-          //       return false
-     } else if (month === 'February') {
-          if (day === 30 || day === 31) {
+               //       return false
+          } else if (month === 'February') {
+               if (day === 30 || day === 31) {
                return false
           }
      } else if (month === 'April' || month === 'June' || month === 'September' || month === 'November') {
@@ -82,29 +81,25 @@ document.querySelectorAll('input').forEach(($input) => {
           e.target.value = masks[field](e.target.value)
      }, false)
 })
-
 //----------------------------------------------
 
 //função que preenche os campos do formulário com as informações
 //já existentes
 
-function getExistentInfo() {
-     var url = new URLSearchParams(location.search)
-     var urlGuid = url.get("id")
+async function getExistentInfo() {
+     var userToBeUpdated = await userService.searchById(urlGuid)
+     .then(res => res.json())
+     .catch(rej => console.log(rej))
 
-     tempUserList = JSON.parse(localStorage.getItem("users"))
-     var updateIndex = tempUserList.findIndex(users => users.id == urlGuid)
-
-     var tempUser = tempUserList[updateIndex]
-
-     var fullName = tempUser.name.split(" ", 2)
-     var birthday = tempUser.birthday.split("/", 3)
-
-     document.getElementById("firstName").value = fullName[0];
-     document.getElementById("lastName").value = fullName[1];
-     document.getElementById("passport").value = tempUser.passport;
-     document.getElementById("email").value = tempUser.email;
-     document.getElementById("phone").value = tempUser.phone;
+     console.log(userToBeUpdated)
+     
+     var birthday = userToBeUpdated.birthday.split("/", 3)
+     
+     document.getElementById("firstName").value = userToBeUpdated.nameUser;
+     document.getElementById("lastName").value = userToBeUpdated.surname;
+     document.getElementById("passport").value = userToBeUpdated.passport;
+     document.getElementById("email").value = userToBeUpdated.email;
+     document.getElementById("phone").value = userToBeUpdated.phone;
      document.getElementById("day").value = birthday[0];
      document.getElementById("month").value = birthday[1];
      document.getElementById("year").value = birthday[2];
@@ -114,7 +109,7 @@ function getExistentInfo() {
 function saveUpdate(urlGuid){
      var url = new URLSearchParams(location.search)
      var urlGuid = url.get("id")
-
+     
      var updateIndex = tempUserList.findIndex(users => users.id == urlGuid)
      var editedUser = tempUserList[updateIndex]
      console.log(editedUser)
@@ -126,13 +121,19 @@ function saveUpdate(urlGuid){
      editedUser.birthday = document.getElementById("day").value + "/" + document.getElementById("month").value + "/" + document.getElementById("year").value
 
      tempUserList[updateIndex] = editedUser
-
+     
      localStorage.setItem("users", JSON.stringify(tempUserList))
-
+     
 }
 
 //----------------------------------------------
 
 function getGUID(userObject, tableIndex){
      return getId = userObject[tableIndex].id
+}
+
+//----------------------------------------------
+
+if (location.search != ''){
+     getExistentInfo()
 }

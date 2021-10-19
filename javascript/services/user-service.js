@@ -1,59 +1,110 @@
+myurl = 'https://localhost:5001/api/Crud/'
+
 const userService =
 {
-    searchById(idUser) {
-        var tempUserList;
 
-        tempUserList = JSON.parse(localStorage.getItem("users"));
+    //GET BY ID
+    searchById(userInfo) {
 
-        if (tempUserList.length == 0) {
-            alert("There is no user with this ID");
-        } else {
-            return tempUserList.find(user => user.idUser === idUser);
+        const tempUserList = (res, rej) => {
+            fetch(myurl+`${userInfo}`, {
+            method:'GET',
+            headers:{
+                'Content-Type':'application/json'
+            },
+        })
+            .then(res)
+            .catch(rej)
         }
+
+        return new Promise(tempUserList)
     },
 
+    // GET ALL
     listAll() {
-        var tempUserList;
+        const tempUserList = (res, rej) => {
+            fetch(myurl, {
+            method:'GET',
+            headers:{
+                'Content-Type':'application/json'
+            },
+        })
+            .then(res)
+            .catch(rej)
+        }
 
-        tempUserList = JSON.parse(localStorage.getItem("users"));
+        return new Promise(tempUserList)
 
-        return tempUserList;
     },
 
+    // POST
     add() {
-        var users = JSON.parse(localStorage.getItem('users') || '[]');
-
-        users.push({
+        var users = {
             id: this.generateGUID(),
-            name: firstName.value + " " + lastName.value,
+            nameUser: firstName.value,
+            surname: lastName.value,
             passport: passport.value,
             email: email.value,
             phone: phone.value,
             birthday: day.value + "/" + month.value + "/" + year.value
-        }); localStorage.setItem('users', JSON.stringify(users));
-    },
+        }
 
-    update(userObject, tableIndex) {
-        
-        if (window.confirm("Do you really want to edit this user?")) {  
-            var tempUser = getGUID(userObject, tableIndex)
-            window.location.href = '../form.html?id=' + tempUser
+        const tempUserList = (res, rej) => {
+            fetch(myurl, {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(users)
+        })
+            .then(res)
+            .catch(rej)
         }
         
+        return new Promise(tempUserList)
     },
 
-    delete(userObject, tableIndex) {
-        if (window.confirm("Do you really want to delete this user?")) {
-            var tempUser = getGUID(userObject, tableIndex)
-            console.log(tempUser)
+    // PUT
+    update(userInfo) {
             
-            tempUserList = JSON.parse(localStorage.getItem("users"));
-            deleteIndex = tempUserList.findIndex(users => users.id == tempUser)
+            var users = {
+                nameUser: firstName.value,
+                surname: lastName.value,
+                passport: passport.value,
+                email: email.value,
+                phone: phone.value,
+                birthday: day.value + "/" + month.value + "/" + year.value
+            }
+    
+            fetch(myurl+`${userInfo}`, {
+                method:'PUT',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify(users)
+            })
+                .then(res => res)
+                .catch(error => console.log(error))
 
-            tempUserList.splice(deleteIndex, 1);
+            return new Promise(tempUserList)
+    },
 
-            localStorage.setItem("users", JSON.stringify(tempUserList))
-            tableFill()
+    // DELETE
+    delete(userInfo) {
+        
+        if (window.confirm("Do you really want to delete this user?")) {
+            const tempUserList = (res, rej) => {
+                fetch(myurl+`${userInfo}`, {
+                method:'DELETE',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+            })
+                .then(res)
+                .catch(rej)
+            }
+    
+            return new Promise(tempUserList)
         }
     },
 

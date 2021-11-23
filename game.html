@@ -9,6 +9,7 @@
     <title>Jogo</title>
 
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet" type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/game.css">
 
@@ -31,8 +32,8 @@
                     <h3>Jogador: X</h3>
                 </div>
                 <div class="div33">
-                    Trocar símbolo<br>
-                    <button id="troca">⇄</button>
+                    Change symbol<br>
+                    <button id="changeSymbol">⇄</button>
                 </div>
                 <div class="div33">
                     <h3>Bot: O</h3>
@@ -66,9 +67,9 @@
                         <td class="jogo" id="c6"></td>
                     </tr>
                     <tr>
-                        <td class="jogo" id="c1"></td>
-                        <td class="jogo" id="c2"></td>
-                        <td class="jogo" id="c3"></td>
+                        <td class="jogo" id="c7"></td>
+                        <td class="jogo" id="c8"></td>
+                        <td class="jogo" id="c9"></td>
                     </tr>
                 </tbody>
             </table>
@@ -78,12 +79,15 @@
 
         <footer>
             <button id='savechang'>
-                Página inicial
+                Novo Jogo
             </button>
         </footer>
 
     </div>
 
+    <script src="javascript/services/tictactoe-service.js"></script>
+    <script src="javascript/js/game.js"></script>
+    <script src="javascript/js/logic.js"></script>
 </body>
 
 </html>

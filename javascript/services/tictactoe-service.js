@@ -1,67 +1,94 @@
-myurl = 'https://localhost:5001/api/Crud/'
+myurl = 'https://localhost:5001/api/gameController/'
 
 const tictactoeService =
 {
+    // GET
+    getBoard() {
 
-    //GET BY ID
-    searchById(userInfo) {
+        const tempGame = (res, rej) => {
+            fetch(myurl, {
+            method:'GET',
+            headers:{
+                'Content-Type':'application/json'
+            },
+        })
+            .then(res)
+            .catch(rej)
+        }
 
-        const tempUserList = (res, rej) => {
+        return new Promise(tempGame)
+    },
+
+    // GET
+    getWinner() {
+        const tempGame = (res, rej) => {
+            fetch(myurl+`${winner}`, {
+            method:'GET',
+            headers:{
+                'Content-Type':'application/json'
+            },
+        })
+            .then(res)
+            .catch(rej)
+        }
+
+        return new Promise(tempGame)
+    },
+
+    // PUT
+    botPlays () {
+        const tempGame = (res, rej) => {
+            fetch(myurl, {
+            method:'PUT',
+            headers:{
+                'Content-Type':'application/json'
+            }
+        })
+            .then(res)
+            .catch(rej)}
+        return new Promise(tempGame)
+    },
+
+    // PUT
+    playerPlays (i, j, userInfo) {
+            
+        var plays = {
+            line:i,
+            column: j,
+            content: userInfo
+        }
+
+        const tempGame = (res, rej) => {
             fetch(myurl+`${userInfo}`, {
-            method:'GET',
+            method:'PUT',
             headers:{
                 'Content-Type':'application/json'
             },
+            body: JSON.stringify(plays)
         })
             .then(res)
             .catch(rej)
         }
-
-        return new Promise(tempUserList)
+        return new Promise(tempGame)
     },
 
-    // GET ALL
-    listAll() {
-        const tempUserList = (res, rej) => {
-            fetch(myurl, {
-            method:'GET',
-            headers:{
-                'Content-Type':'application/json'
-            },
-        })
-            .then(res)
-            .catch(rej)
-        }
-
-        return new Promise(tempUserList)
-
-    },
-
-    // POST
-    add() {
-        var users = {
-            id: this.generateGUID(),
-            nameUser: firstName.value,
-            surname: lastName.value,
-            passport: passport.value,
-            email: email.value,
-            phone: phone.value,
-            birthday: day.value + "/" + month.value + "/" + year.value
-        }
-
-        const tempUserList = (res, rej) => {
-            fetch(myurl, {
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json'
-            },
-            body: JSON.stringify(users)
-        })
-            .then(res)
-            .catch(rej)
-        }
+    // DELETE
+    newGame() {
         
-        return new Promise(tempUserList)
-    },
+        if (window.confirm("Do you really want to start a new game?")) {
+            const tempGame = (res, rej) => {
+                fetch(myurl, {
+                method:'DELETE',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+            })
+                .then(res)
+                .catch(rej)
+            }
+    
+            return new Promise(tempGame)
+        }
+    }
 
 }
